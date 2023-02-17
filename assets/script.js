@@ -1,7 +1,7 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(document).ready(function () {
+$(function () {
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
     // local storage. HINT: What does `this` reference in the click listener
@@ -12,6 +12,88 @@ $(document).ready(function () {
     setInterval(tick, 1000);
     setInterval(checkTime, 600000);
     clearBtn.on('click', clear);
+   //Define event
+    button9.on('click', function() {
+        event.preventDefault();
+        if (box9.val() !== '') {
+            localStorage.setItem('Entry9', box9.val());
+        }
+    });
+  
+    button10.on('click', function() {
+        event.preventDefault();
+        if (box10.val() !== '') {
+            localStorage.setItem('Entry10', box10.val());
+        }
+  
+    });
+  
+    button11.on('click', function() {
+        event.preventDefault();
+        if (box11.val() !== '') {
+            localStorage.setItem('Entry11', box11.val());
+  
+        }
+  
+    });
+  
+    button12.on('click', function() {
+        event.preventDefault();
+        if (box12.val() !== '') {
+            localStorage.setItem('Entry12', box12.val());
+  
+        }
+    });
+  
+    button1.on('click', function() {
+        event.preventDefault();
+        if (box1.val() !== '') {
+            localStorage.setItem('Entry1', box1.val());
+  
+        }
+  
+    });
+  
+    button2.on('click', function() {
+        event.preventDefault();
+        if (box2.val() !== '') {
+            localStorage.setItem('Entry2', box2.val());
+  
+        }
+  
+    });
+  
+    button3.on('click', function() {
+        event.preventDefault();
+        if (box3.val() !== '') {
+            localStorage.setItem('Entry3', box3.val());
+  
+        }
+  
+    });
+  
+    button4.on('click', function() {
+        event.preventDefault();
+  
+        if (box4.val() !== '') {
+            localStorage.setItem('Entry4', box4.val());
+  
+        }
+  
+    });
+    
+    button5.on('click', function() {
+        event.preventDefault();
+  
+        if (box5.val() !== '') {
+            localStorage.setItem('Entry5', box5.val());
+  
+        }
+  
+    });
+  
+    checkTime();
+  });
     //
     // TODO: Add code to apply the past, present, or future class to each time
     // block by comparing the id to the current hour. HINTS: How can the id
@@ -161,4 +243,4 @@ $(document).ready(function () {
 
     //
     // TODO: Add code to display the current date in the header of the page.
-  });
+ 
