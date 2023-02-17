@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -31,49 +31,80 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container-fluid px-5">
-      <!-- Use class for "past", "present", and "future" to apply styles to the
-        time-block divs accordingly. The javascript will need to do this by
-        adding/removing these classes on each div by comparing the hour in the
-        id to the current hour. The html provided below is meant to be an example
-        demonstrating how the css provided can be leveraged to create the
-        desired layout and colors. The html below should be removed or updated
-        in the finished product. Remember to delete this comment once the
-        code is implemented.
-        -->
-
-      <!-- Example of a past time block. The "past" class adds a gray background color. -->
-      <div id="hour-9" class="row time-block past">
-        <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
-        <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
-        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
-          <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
-
-      <!-- Example of a present time block. The "present" class adds a red background color. -->
-      <div id="hour-10" class="row time-block present">
-        <div class="col-2 col-md-1 hour text-center py-3">10AM</div>
-        <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
-        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
-          <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
-
-      <!-- Example of a future time block. The "future" class adds a green background color. -->
-      <div id="hour-11" class="row time-block future">
-        <div class="col-2 col-md-1 hour text-center py-3">11AM</div>
-        <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
-        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
-          <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"></script>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+        <div class="container main">
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    9am
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='9' id='div9'></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn9"></button>
+            </div>
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    10am
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='10' id="div10"></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn10"></button>
+    
+            </div>
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    11am
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='11' id="div11"></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn11"></button>
+    
+            </div>
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    12am
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='12' id="div12"></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn12"></button>
+    
+            </div>
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    1pm
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='13' id="div1"></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn1"></button>
+            </div>
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    2pm
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='14' id="div2"></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn2"></button>
+    
+            </div>
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    3pm
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='15' id="div3"></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn3"></button>
+    
+            </div>
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    4pm
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='16' id="div4"></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn4"></button>
+    
+            </div>
+            <div class='row time-block'>
+                <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    5pm
+                </div>
+                <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='17' id="div5"></textarea>
+                <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn5"></button>
+    
+            </div>
+    
+        </div>
+    
+        </div>    
+    
+      
